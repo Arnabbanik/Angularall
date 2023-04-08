@@ -5,15 +5,18 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { BindingExComponent } from './binding-ex/binding-ex.component';
 import { FormsModule } from '@angular/forms';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'binding', pathMatch: 'full'},
-  {path:'binding', component:BindingExComponent}
+  {path:'binding', component:BindingExComponent},
+  {path: '**', component: ErrorPageComponent}
 ]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
