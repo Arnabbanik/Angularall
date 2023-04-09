@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Angular</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="binding">Binding</a>
+        </li>
+
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a class="nav-link" [routerLink]="'directive'">Directive</a>
+        </li>
+
+        <li class="nav-item dropdown" [routerLinkActive]="'active'">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a class="nav-link" [routerLink]="['parentchild']">ParentChild</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+    <!-- routerlink used for navigation it can be done by three ways 
+  1. As a binding
+  2.As a property binding
+  3.As an array
+   -->
+
+   <!-- routerLinkActive is used for showing active link & It's a property binding setting class there.
+    ( [routerLinkActive]= "'active'") here active is a css class
+   Here is an problem that when a child link is clicked both parent and child become active for that 
+   we use routerLinkActiveOptions -->
+
+   <!-- Absolute & Relative Path
+   If in routerlink we use / before path then that is a Absolute path which is related to the root component
+   If in routerlink we use only the path then that is a relative path   -->
