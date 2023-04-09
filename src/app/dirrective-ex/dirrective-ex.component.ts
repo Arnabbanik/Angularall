@@ -6,11 +6,24 @@ import {Routes} from '@angular/router';
   templateUrl: './dirrective-ex.component.html',
   styleUrls: ['./dirrective-ex.component.css']
 })
-export class DirrectiveExComponent implements OnInit {
+export class DirrectiveExComponent {
 
-  constructor() { }
+  display: boolean =false;
 
-  ngOnInit(): void {
-  }
+  fadeMeOut(){
+
+  this.display = true;
+
+ }
+
+  products=[
+
+ {title: "cardiology",subtitle: "DR s",description: "We have very experienced Doctors assembly",available: "Available"},
+
+ {title: "Gynology",subtitle: "DR Basu",description: "We have very *experienced Doctors assembly", available: "Not Available"},
+
+ {title: "ENT",subtitle: "DR Kanu",description: "We have very *experienced Doctors assembly", available:"Available"},
+
+ ]
 
 }

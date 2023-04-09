@@ -1,2 +1,79 @@
-<p>dirrective-ex works!</p>
-<!-- <a [routerLink]="binding">Go to Home</a> -->
+<h2 class="headercontent">Dierective Start</h2>
+
+<!-- Directive is a simply an instruction to the DOM
+
+ These are two types
+
+ Structural Directives - Changes the view of a web page by adding
+
+ or removing DOM elements from a webpage
+
+ Example - ngFor, ngIf, ngSwitch
+
+ Attribute Directives - Used like an attribute on a existing webpage
+
+ element to change its look
+
+ & behaviour.
+
+-->
+
+
+
+
+<!-- ngFor directive= Structural directive using this we can repeat an element -->
+
+<!-- ngStyle directive= example of attribute directive using this we can change the style dynamically-->
+
+<!-- ngIf directive= ex of Structural directive using this we change DOM element by true or false condition -->
+
+<!-- ngClass directive= ex of attribute directive using this we can add or remove CSS class dynamically-->
+
+<!-- *point to remember
+
+ There is always * before structural directive
+
+-->
+
+
+
+
+  <div class="card d-inline" style="width: 18rem;" *ngFor = "let i of products" >
+
+    <div class="card-body d-block"  [ngStyle]="{backgroundColor: i.available === 'Available' ? '#D5F5E3' : '#FADBDB'}">
+
+        <h5 class="card-title">{{i.title}}</h5>
+
+        <h6 class="card-subtitle mb-2 text-muted">{{i.subtitle}}</h6>
+
+        <p class="card-text">{{i.description}}</p>
+
+        <a href="#" class="card-link" *ngIf="i.available === 'Available'; else notifyme">Book Now</a>
+
+        <a href="#" class="card-link" [ngStyle]="{color: i.available === 'Available' ? 'green' : 'red'}">{{i.available}}</a>
+
+        <ng-template #notifyme>
+
+        <a href="#" class="card-link">Notify Me</a>
+
+        </ng-template>
+
+    </div>
+
+  </div>
+
+
+
+
+<div class="ngClassex" [ngClass]="{fadeOut: display}" >
+
+  <p>It is an example of ngClass</p>
+
+
+
+
+  <button (click)="fadeMeOut()">Fade me</button>
+
+</div>
+
+<h2 class="headercontent">Dierective End</h2>

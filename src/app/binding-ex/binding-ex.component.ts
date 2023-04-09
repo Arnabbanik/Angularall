@@ -13,7 +13,7 @@ export class BindingExComponent implements OnInit {
   title: string = "This is an example of String-Interpolation";
 
   //property binding
-  property:boolean = false;
+  propertyvalue:boolean = false;
   expression: string = "backgroud-color: yellow";
   fontcolor: string = "red";
 
@@ -22,14 +22,15 @@ export class BindingExComponent implements OnInit {
   onSubmit(){
     this.visible = true;
   }
-
-  //example2
-  searchval: string = 'Arnab';
+  //event binding example2
+  searchval: string = '';
   changesearchval(eventData: any){
     this.searchval = (<HTMLInputElement>eventData.target).value;
   }
+
+
   //two-way databinding
-  twowayval: string = '';
+  twowayval: Number = 0;
   ngOnInit(): void {
   }
 

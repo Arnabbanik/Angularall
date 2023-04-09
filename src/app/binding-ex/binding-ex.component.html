@@ -1,23 +1,31 @@
-<h2 class="headercontent">Data Binding Start</h2>
+<h2 class="headercontent">Data Binding Start</h2>
+<p>Data Binding is the binding data from component to template & template to 
+  component vice-versa. This is two type 
+  1. one-way Binding - either view template to component or component to view. 
+  Example: string interpolation & property binding for  component class to view template. 
+           Event Binding for view template to component class 
+  2. Twoway Binding - to both side
+</p>
 
-<p>Hii {{title}}</p><!--string interpolation -->
+
+<p>Hii {{title}}</p><!--string interpolation -->
 
 
 
 
-<p [hidden]="property" [style]="expression" [style.color]="fontcolor">Lorem ipsum dolor sit amet consectetur
+<p [hidden]="propertyvalue" [style]="expression" [style.color]="fontcolor">Lorem ipsum dolor sit amet consectetur
 
-     adipisicing elit. Qui vitae at quas
+        adipisicing elit. Qui vitae at quas
 
-    inventore, a facere ab beatae nemo quos 
+        inventore, a facere ab beatae nemo quos 
 
-    molestias debitis, facilis eligendi veniam 
+        molestias debitis, facilis eligendi veniam 
 
-    quae expedita eum sapiente doloribus 
+        quae expedita eum sapiente doloribus 
 
-    distinctio.
+        distinctio.
 
-<!-- property binding = component to template file  -->
+<!-- property binding = component to template file  -->
 
 </p>
 
@@ -26,39 +34,41 @@
 
 <!-- event binding = template to component file -->
 
-<h3>Event Binding example 1</h3>
+<h3>Event Binding example 1</h3>
 
-<p [hidden]="visible">Event binding example place</p>
+<p [hidden]="visible">Event binding example place</p>
 
-<button type="button" (click)="onSubmit()">Click to omit</button>
-
-
+<button type="button" (click)="onSubmit()">Click to omit</button>
 
 
-<h3>Event binding example 2</h3>
 
-<div class="sear-div">
 
-    <span><b>Search :</b></span>
+<h3>Event binding example 2</h3>
 
-    <input type="text" (input)="changesearchval($event)">
+<div class="sear-div">
+
+  <span><b>Search :</b></span>
+
+  <input type="text" (input)="changesearchval($event)">
 
 </div>
 
-<p>{{searchval}}</p>
+<p>You searched for "{{searchval}}"</p>
 
 
 
 
-<!-- two-way binding -->
+<!-- two-way binding -->
 
 <h3>Two way data binding</h3>
 
 <div class="search-div">
-    <span><b>Search :</b></span>
+    <form action="">
+      <span><b>Search :</b></span>
 
-    <!-- <input type="text" [(ngModel)]="twowayval">
-</div> -->
+      <!-- <input type="number" [(ngModel)]="twowayval"> -->
+    </form>
+</div>
 
 <p>{{twowayval}}</p>
 
