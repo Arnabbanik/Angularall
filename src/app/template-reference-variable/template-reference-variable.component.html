@@ -1,0 +1,41 @@
+<p>A Template reference variable is a reference to any DOM element, component or a directive in the template</p>
+
+<div class="container">
+
+    <h3>As a DOM Element</h3>
+    <input type="text" #myvar (keyup)="0"> <!-- //this reference variable myvar stores the reference of input tag as a DOM element -->
+    <button (click)="sayHello(myvar)">Say Hello</button>
+    <p>{{myvar.value}}</p>
+
+</div>
+
+<div class="container">
+
+    <h3>At Directive</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>city</th>
+                <th>country</th>
+                <th>select</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customers of customers">
+
+                <td>{{customers.customerNo}}</td>
+                <td>{{customers.name}}</td>
+                <td>{{customers.address}}</td>
+                <td>{{customers.city}}</td>
+                <td>{{customers.country}}</td>
+                <button>select</button>
+
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

@@ -15,6 +15,10 @@ import { ChildComponent } from './parent-child/child/child.component';
 import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
 import {ParentoneComponent} from './childtoparent/parentone/parentone.component';
 import { ChildoneComponent} from './childtoparent/childone/childone.component';
+import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
+import { ServiceexComponent } from './serviceex/serviceex.component';
+import { AngularcomComponent } from './Serviceex/angularcom/angularcom.component';
+import { JavascriptcomComponent } from './Serviceex/javascriptcom/javascriptcom.component';
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'binding', pathMatch: 'full'},
@@ -22,6 +26,8 @@ const appRoute: Routes = [
   {path:'directive', component: DirrectiveExComponent},
   {path: 'parentchild', component: ParentChildComponent},
   {path:'childparent', component: ChildtoparentComponent},
+  {path:'trf', component:TemplateReferenceVariableComponent},
+  {path:'service', component: ServiceexComponent},
   {path: '**', component: ErrorPageComponent}
 ]
 
@@ -37,7 +43,11 @@ const appRoute: Routes = [
     ChildComponent,
     ChildtoparentComponent,
     ParentoneComponent,
-    ChildoneComponent
+    ChildoneComponent,
+    TemplateReferenceVariableComponent,
+    ServiceexComponent,
+    AngularcomComponent,
+    JavascriptcomComponent
   ],
   imports: [
     BrowserModule,
